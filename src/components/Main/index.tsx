@@ -5,7 +5,7 @@ import Header from 'components/Common/Header'
 import Sidebar from 'components/Common/Sidebar'
 import ErrorBoundary from 'components/Common/ErrorBoundary'
 
-const Content = React.lazy(() => import('components/Main/Content'))
+const Content = React.lazy(() => import('components/Main/Content/MainContent'))
 
 const Wrapper = styled.div`
   display: flex;

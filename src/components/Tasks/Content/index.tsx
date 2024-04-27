@@ -52,7 +52,7 @@ const types = {
   complete: 'Complete'
 }
 
-const Content: React.FC<IContentProps> = props => {
+const TasksContent: React.FC<IContentProps> = props => {
   const { tasks, showState, backlog, progress, complete } = props
 
   React.useEffect(() => {
@@ -98,4 +98,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Content)
+)(TasksContent)

@@ -2,13 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import Header from 'components/Common/Header'
 import Sidebar from 'components/Common/Sidebar'
+import MainContent from 'components/Main/Content/MainContent'
 
 const Wrapper = styled.div`
   display: flex;
   max-width: 1600px;
   margin: 0 auto;
 `
-const Content = styled.div`
+const ContentDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -26,7 +27,9 @@ const Tasks = () => {
       <Header />
       <Wrapper>
         <Sidebar />
-        <Content>CONTENT</Content>
+        <ContentDiv>
+          <MainContent />
+        </ContentDiv>
       </Wrapper>
     </>
   )

@@ -17,7 +17,7 @@ const Wrapper = styled.section`
   }
 `
 
-const Content = () => {
+const MainContent = () => {
   return (
     <Wrapper>
       <ContentTitle />
@@ -29,4 +29,4 @@ const Content = () => {
   )
 }
 
-export default Content
+export default MainContent

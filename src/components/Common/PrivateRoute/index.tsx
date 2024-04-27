@@ -8,7 +8,6 @@ interface IPrivateRouteProps extends RouteProps {
 }
 
 function PrivateRoute({ auth, children, ...rest }: IPrivateRouteProps) {
-  console.log('auth', auth, location)
   return (
     <Route
       {...rest}

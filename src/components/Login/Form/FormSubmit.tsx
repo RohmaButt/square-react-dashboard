@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
-import { Redirect } from 'react-router-dom'
 import { IUserInfo } from 'store/auth/types'
 import { checkAuth } from 'store/auth/actions'
 import { useHistory } from 'react-router-dom'
@@ -81,17 +80,7 @@ const FormSubmit: React.FC<IFormSubmitProps> = props => {
 
   const [user, setUser] = React.useState<IUserInfo>(dataUser)
   const [error, setError] = React.useState<IUserInfo>(dataError)
-  const [redirect, setRedirect] = React.useState<boolean>(false)
   const history = useHistory()
-
-  const renderRedirect = (): object | void => {
-    console.log('first', history, redirect)
-    if (redirect) {
-      // history.push('/tasks')
-      //  window.open('/tasks')
-      window.open('http://localhost:8080/tasks', '_blank')
-    }
-  }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
@@ -100,7 +89,9 @@ const FormSubmit: React.FC<IFormSubmitProps> = props => {
         login: user.login,
         password: user.password
       })
-      setRedirect(true)
+      if (history.location.pathname !== '/tasks') {
+        history.push('/tasks')
+      }
     }
   }
 
@@ -169,12 +160,7 @@ const FormSubmit: React.FC<IFormSubmitProps> = props => {
           {error.password ? 'Error, your password: admin' : ''}
         </InputLabel>
       </Wrapper>
-      <InputSubmit
-        type='submit'
-        value='Sign in'
-        //  disabled={error.login || error.password}
-      />
-      {renderRedirect()}
+      <InputSubmit type='submit' value='Sign in' />
     </form>
   )
 }
