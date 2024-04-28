@@ -4,7 +4,7 @@
     "module": "commonjs",
     "target": "ES5",
     "baseUrl": "./src/",
-    "outDir": "./dist/",
+    "outDir": "./public/",
     "moduleResolution": "node",
     "lib": [
       "es2015",

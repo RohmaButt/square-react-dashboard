@@ -6,12 +6,12 @@
   "license": "MIT",
   "main": "index.tsx",
   "scripts": {
-    "clear": "rimraf ./dist",
+    "clear": "rimraf ./public",
     "dev": "webpack-dev-server --mode development --open --hot",
     "build": "npm run clear && webpack --mode production --verbose",
     "format": "prettier \"./src/**/*.+(js|jsx|ts|tsx)\" --write",
     "ts": "tsc",
-    "bundle-report": "webpack-bundle-analyzer --port 4200 dist/stats.json"
+    "bundle-report": "webpack-bundle-analyzer --port 4200 public/stats.json"
   },
   "devDependencies": {
     "@babel/core": "^7.7.0",
