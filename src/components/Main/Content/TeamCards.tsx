@@ -3,7 +3,6 @@ import React from 'react'
 import { IContentTeamProps } from 'store/teams/types'
 
 const TeamCards: React.FC<IContentTeamProps> = props => {
-  console.log('first', props)
   return props.teams.map((team: any) => (
     <TeamCard
       id={0}

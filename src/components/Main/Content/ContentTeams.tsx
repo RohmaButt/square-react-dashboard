@@ -45,7 +45,6 @@ const Teams = styled.div`
 const ContentTeams: React.FC<IContentTeamsProps> = props => {
   const { teams } = props
 
-  console.log('contentTeam', teams)
   React.useEffect(() => {
     !teams.length && props.fetchTeams()
   }, [])
