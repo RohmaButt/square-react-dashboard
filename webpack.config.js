@@ -1,4 +1,9 @@
 const path = require('path')
+const crypto = require('crypto')
+const crypto_orig_createHash = crypto.createHash
+crypto.createHash = algorithm =>
+  crypto_orig_createHash(algorithm == 'md4' ? 'sha256' : algorithm)
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin
@@ -8,7 +13,7 @@ module.exports = {
   entry: './src/index',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[hash].bundle.js',
+    filename: 'bundle.js',
     publicPath: './'
   },
   resolve: {
