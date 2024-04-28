@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Header from 'components/Common/Header'
 import Sidebar from 'components/Common/Sidebar'
-import MainContent from 'components/Main/Content/MainContent'
+import Content from 'components/Tasks/Content/index'
 
 const Wrapper = styled.div`
   display: flex;
@@ -28,7 +28,7 @@ const Tasks = () => {
       <Wrapper>
         <Sidebar />
         <ContentDiv>
-          <MainContent />
+          <Content />
         </ContentDiv>
       </Wrapper>
     </>

@@ -10,18 +10,17 @@ import { GlobalStyle } from 'components/Common/GlobalStyle'
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 
 const App = () => {
-  console.log('app')
   return (
     <>
       <Router>
         <Switch>
           <Route exact path='/login' component={Login} />
-          <Route path='/settings' component={Settings} />
-          <Route path='/activity' component={Activity} />
-          <Route path='/schedule' component={Schedule} />
-          <Route path='/messages' component={Messages} />
-          <Route path='/dashboard' component={Main} />
-          <Route path='/tasks' component={Tasks} />
+          <Route exact path='/settings' component={Settings} />
+          <Route exact path='/activity' component={Activity} />
+          <Route exact path='/schedule' component={Schedule} />
+          <Route exact path='/messages' component={Messages} />
+          <Route exact path='/dashboard' component={Main} />
+          <Route exact path='/tasks' component={Tasks} />
           <Route path='/' component={Login} />
         </Switch>
       </Router>

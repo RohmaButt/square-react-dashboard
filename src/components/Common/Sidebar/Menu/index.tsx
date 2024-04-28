@@ -21,7 +21,7 @@ const itemsData = [
   {
     name: 'Dashboard',
     icon: IconDashboard(),
-    link: '/'
+    link: '/dashboard/'
   },
   {
     name: 'Messages',

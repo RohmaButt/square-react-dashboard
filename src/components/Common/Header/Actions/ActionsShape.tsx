@@ -96,7 +96,7 @@ const ActionShape = () => {
         <ShapeInfo>
           <AvatarWrapper>
             <Avatar {...userProps} />
-            <span>@MikeCobain:</span>
+            <span>@JaneDoe:</span>
           </AvatarWrapper>
           <Text>{textNotification}</Text>
         </ShapeInfo>

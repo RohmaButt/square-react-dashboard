@@ -5,9 +5,8 @@ import styled from 'styled-components'
 import Loader from 'components/Common/Loader'
 import { getTeams } from 'store/teams/selectors'
 import { fetchTeams } from 'store/teams/actions'
-import TeamCard from 'components/Common/TeamCard'
 import IconOval from 'components/Common/Icons/Common/Oval'
-import { ITeamsState, ITeamListState } from 'store/teams/types'
+import { IContentTeamsProps } from 'store/teams/types'
 import AddBigButton from 'components/Common/Buttons/AddBigButton'
 import TeamCards from './TeamCards'
 
@@ -46,6 +45,7 @@ const Teams = styled.div`
 const ContentTeams: React.FC<IContentTeamsProps> = props => {
   const { teams } = props
 
+  console.log('contentTeam', teams)
   React.useEffect(() => {
     !teams.length && props.fetchTeams()
   }, [])

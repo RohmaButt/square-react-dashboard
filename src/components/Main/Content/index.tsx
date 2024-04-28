@@ -17,16 +17,16 @@ const Wrapper = styled.section`
   }
 `
 
-const MainContent = () => {
+const Content = () => {
   return (
     <Wrapper>
       <ContentTitle />
-      <ErrorBoundary>
-        <ContentTeams />
-      </ErrorBoundary>
+      {/* <ErrorBoundary> */}
+      <ContentTeams />
+      {/* </ErrorBoundary> */}
       <ContentTasks />
     </Wrapper>
   )
 }
 
-export default MainContent
+export default Content
